@@ -1,14 +1,26 @@
+package com.omkar.awt;
+
 import java.awt.*;
-class Frame1{
-    public static void main(String[] args){
-        Frame f1 = new Frame();
-        f1.setTitle("Demo frame");
-        f1.setSize(500, 500);
-        f1.setLayout(new FlowLayout());
-        Label l1 = new Label();
-        l1.setText("Omkar");
-        f1.add(l1);
-        TextField tf1 = new TextField("Erase me and Enter text here");
-        f1.add(tf1);
-    }
+
+public class Frame1 extends java.awt.Frame{
+	
+	public Frame1() {
+		Label label = new Label("Enter First Name");
+		label.setBounds(100, 100, 100, 30);
+		add(label);
+		TextField tField = new TextField("Enter text here");
+		tField.setBounds(140,100,100,30);
+		add(tField);
+		
+        setTitle("Frame");
+        setSize(700, 700);
+        setLayout(null); // Using FlowLayout for simplicity
+        setVisible(true);
+	}
+	public static void main(String[] args) {
+		
+		Frame1 frame1 = new Frame1();
+
+	}
+
 }
